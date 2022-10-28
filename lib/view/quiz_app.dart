@@ -2,6 +2,7 @@
 //view/quiz_app.dart
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_test/view/event_index.dart';
 import '../service/load_csv.dart';
 import '../service/suffle.dart';
 import '../view/quiz_page.dart';
@@ -36,6 +37,16 @@ class QuizApp extends StatelessWidget {
                   goToQuizApp(context); //クイズアプリへ遷移するQuizApp関数がよばれる
                 },
                 child: const Text('スタート')),
+            ElevatedButton(
+              child: Text("enpitアプリへ"),
+              onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NextPage()),
+                  );
+              }
+              ),
+            )
           ],
         ),
       ),
